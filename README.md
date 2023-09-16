@@ -40,4 +40,4 @@ Developed initially for version a21.2(b14).
 
 [1]: https://github.com/OCB7D2D/OcbSeedPouch
 [2]: https://github.com/OCB7D2D/OcbSeedPouch/releases
-[3]: https://www.nexusmods.com/7daystodie/mods/xxxx
+[3]: https://www.nexusmods.com/7daystodie/mods/3700

@@ -1,4 +1,4 @@
-name: OcbSeedPouchGit
+name: OcbSeedPouch
 
 on:
   create:
@@ -22,7 +22,7 @@ jobs:
     - name: Call 7D2D compiler action
       uses: OCB7D2D/OcbModCompiler@master
       with:
-        name: "OcbSeedPouchGit"
+        name: "OcbSeedPouch"
         version: "${{ github.ref_name }}"
         token: "${{ secrets.GITHUB_TOKEN }}"
         OCBTOKEN: "${{ secrets.OCBTOKEN }}"

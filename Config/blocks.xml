@@ -1,0 +1,29 @@
+<configs>
+	<append
+		xpath="/blocks/block[
+    @name='plantedMushroom1' or
+    @name='plantedYucca1' or
+    @name='plantedCotton1' or
+    @name='plantedCoffee1' or
+    @name='plantedGoldenrod1' or
+    @name='plantedAloe1' or
+    @name='plantedBlueberry1' or
+    @name='plantedPotato1' or
+    @name='plantedChrysanthemum1' or
+    @name='plantedCorn1' or
+    @name='plantedGraceCorn1' or
+    @name='plantedHop1' or
+    @name='plantedSnowberry1' or
+    @name='plantedPumpkin1' or
+    @name='treePlantedOak1m' or
+    @name='treePlantedMountainPine1m' or
+    @name='treePlantedWinterPine1m' or
+    @name='plantedtreeGrassSeed1' or
+    starts-with(@name, 'DFseed') or
+    starts-with(@name, 'seed') or
+    (contains(@name, 'Seed') and @farmLifeGrowing='true')
+  ]"
+	>
+		<property name="OcbSeedPouch" value="True"/>
+	</append>
+</configs>

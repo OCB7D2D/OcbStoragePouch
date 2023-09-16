@@ -103,6 +103,7 @@
     <Compile Include="Harmony\SeedPouch.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\blocks.xml" />
     <Content Include="Config\progression.xml" />
     <Content Include="Config\recipes.xml" />
     <Content Include="Config\items.xml" />

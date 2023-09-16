@@ -1,9 +1,9 @@
 <configs>
 	<append xpath="/recipes">
-		<recipe name="OcbSeedPouch" count="1" craft_area="workbench" tags="perkPackMule,learnable">
-			<ingredient name="resourceLeather" count="24"/>
-			<ingredient name="resourceSewingKit" count="3"/>
+		<recipe name="OcbSeedPouch" count="1" craft_time="40" craft_area="workbench" tags="perkPackMule,learnable">
 			<ingredient name="resourceCloth" count="72"/>
+			<ingredient name="resourceLeather" count="24"/>
+			<ingredient name="resourceSewingKit" count="4"/>
 		</recipe>
 	</append>
 </configs>

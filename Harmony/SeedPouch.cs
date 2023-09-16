@@ -55,13 +55,18 @@ public class OcbSeedPouch : IModApi
                 ItemValue itemValue1 = itemStack1?.itemValue;
                 ItemClass itemClass = itemValue1?.ItemClass;
                 // This is hardcoded for now, as I'm lazy
-                if (itemClass?.Name != "OcbSeedPouch") return;
+                if (!itemClass.Properties.GetBool("StoragePouch")) return;
                 __instance.AddActionListEntry(new ItemActionEntryStoreSeeds(
                     stackController, itemStack1, itemValue1));
                 __instance.AddActionListEntry(new ItemActionEntryLoadSeeds(
                     stackController, itemStack1, itemValue1));
+                // Remove scrap option to avoid unfortunate mishaps
+                ___itemActionEntries.RemoveAll(x => x is ItemActionEntryScrap);
             }
         }
     }
+
+    // ####################################################################
+    // ####################################################################
 
 }

@@ -1,13 +1,19 @@
 using System.Collections.Generic;
-using static InvBaseItem;
 using static TypedMetadataValue;
 
 public class ItemActionEntryStoreSeeds : BaseItemActionEntry
 {
 
-    XUiC_ItemStack Controller;
+    // ####################################################################
+    // ####################################################################
+
+    readonly XUiC_ItemStack Controller;
     private readonly ItemValue Pouch;
     private readonly ItemStack Stack;
+    private readonly string PouchName;
+
+    // ####################################################################
+    // ####################################################################
 
     public ItemActionEntryStoreSeeds(XUiC_ItemStack controller, ItemStack stack, ItemValue pouch) :
         base(controller, "lblContextActionStoreSeeds", "ui_game_symbol_pouch_in", GamepadShortCut.DPadLeft)
@@ -15,18 +21,20 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
         Stack = stack;
         Pouch = pouch;
         Controller = controller;
+        PouchName = Pouch?.ItemClass?.Name;
     }
 
-    private bool IsBagable(ItemValue iv)
+    // ####################################################################
+    // ####################################################################
+
+    private bool IsBagable(ItemClass item)
     {
-        // Support custom property to mark anything to bag
-        if (iv.ItemClass.Properties.GetBool("PlantSeed")) return true;
-        // Support vanilla naming schema for seeds
-        var name = iv.ItemClass.Name;
-        if (!name.EndsWith("1")) return false;
-        if (!name.StartsWith("planted")) return false;
-        return true;
+        if (!item.IsBlock()) return item.Properties.GetBool(PouchName);
+        else return item.GetBlock().Properties.GetBool(PouchName);
     }
+
+    // ####################################################################
+    // ####################################################################
 
     public override void OnActivated()
     {
@@ -39,18 +47,21 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
         for (int i = 0; i < slots.Length; i++)
         {
             ItemStack slot = slots[i];
-            if (slot == null) continue;
-            if (slot.itemValue == null) continue;
-            if (slot.itemValue.ItemClass == null) continue;
-            if (!IsBagable(slot.itemValue)) continue;
+            var ic = slot?.itemValue?.ItemClass;
+            if (ic == null) continue;
+            if (!IsBagable(ic)) continue;
             slots[i] = ItemStack.Empty.Clone();
             pouch.Add(slot); // Add to pouch
         }
-        Pouch.SetMetadata("seeds", OcbSeedPouch.Encode(pouch), TypeTag.String);
+        var data = OcbSeedPouch.Encode(pouch);
+        Pouch.SetMetadata("seeds", data, TypeTag.String);
         bag.SetSlots(bag.GetSlots());
         belt.SetSlots(belt.GetSlots());
         Stack.itemValue = Pouch;
         Controller.ItemStack = Stack;
     }
+
+    // ####################################################################
+    // ####################################################################
 
 }
