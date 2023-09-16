@@ -1,0 +1,4 @@
+Key,english
+lblContextActionStoreSeeds,Bag
+lblContextActionLoadSeeds,Unpack
+OcbSeedPouch,Seed Pouch
