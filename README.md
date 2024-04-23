@@ -15,6 +15,16 @@ When unpacking the pouch, any seeds that will not fit your inventory will
 be spilled on the ground. I may improve these behaviors in the future if
 people think this is a useful mod!
 
+## Compatibility with other Mods
+
+Other mods that add seeds will either need to use the same name schema
+as vanilla or a specific config. This can either be done in the other
+mods directly (`<property name="OcbSeedPouch" value="True"/>`) or by
+extending the rule-set in this mod in `Config/block.xml`. In any case
+you must ensure that this mod loads after any mod that adds new items
+you want to be able to collect in the seed pouch. This can be achieved
+by renaming either mod to enforce the correct load order.
+
 ## How to unlock
 
 I've put this utility behind pack mule perk level 2 (bag lady),
@@ -29,6 +39,10 @@ Otherwise please use one of the [official releases][2] here.
 Only clone or download the repo if you know what you do!
 
 ## Changelog
+
+### Version 0.0.2
+
+- Add compatibility for War3zuk FarmLife
 
 ### Version 0.0.1
 

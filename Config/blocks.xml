@@ -21,6 +21,7 @@
     @name='plantedtreeGrassSeed1' or
     starts-with(@name, 'DFseed') or
     starts-with(@name, 'seed') or
+    substring(@name, string-length(@name) - 3) = 'Seed' or
     (contains(@name, 'Seed') and @farmLifeGrowing='true')
   ]"
 	>
