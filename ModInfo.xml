@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-  <Name value="OcbSeedPouch" />
-  <DisplayName value="OCB Seed Pouch to free inventory slots" />
-  <Description value="A pouch to store seeds to free up inventory slots." />
-  <Website value="https://github.com/OCB7D2D/OcbSeedPouch" />
+  <Name value="OcbStoragePouch" />
+  <DisplayName value="OCB Storage Pouch to free inventory slots" />
+  <Description value="A pouch for seeds and a briefcase for magazines." />
+  <Website value="https://github.com/OCB7D2D/OcbStoragePouch" />
   <Author value="ocbMaurice" />
   <Version value="0.1.0"/>
 </xml>

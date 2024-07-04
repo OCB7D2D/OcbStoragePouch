@@ -2,7 +2,7 @@ using HarmonyLib;
 using System.Collections.Generic;
 using System.Reflection;
 
-public class OcbSeedPouch : IModApi
+public class OcbStoragePouch : IModApi
 {
     // ####################################################################
     // ####################################################################
@@ -55,9 +55,9 @@ public class OcbSeedPouch : IModApi
                 ItemValue itemValue1 = itemStack1?.itemValue;
                 ItemClass itemClass = itemValue1?.ItemClass;
                 if (!itemClass.Properties.Contains("StoragePouch")) return;
-                __instance.AddActionListEntry(new ItemActionEntryStoreSeeds(
+                __instance.AddActionListEntry(new ItemActionEntryStorePouch(
                     stackController, itemStack1, itemValue1));
-                __instance.AddActionListEntry(new ItemActionEntryLoadSeeds(
+                __instance.AddActionListEntry(new ItemActionEntryLoadPouch(
                     stackController, itemStack1, itemValue1));
                 // Remove scrap option to avoid unfortunate mishaps
                 ___itemActionEntries.RemoveAll(x => x is ItemActionEntryScrap);

@@ -1,4 +1,4 @@
-name: OcbSeedPouch
+name: OcbStoragePouch
 
 on:
   create:
@@ -23,7 +23,7 @@ jobs:
       uses: OCB7D2D/OcbModCompiler@master
       with:
         v7d2d: 'V1.0'
-        name: "OcbSeedPouch"
+        name: "OcbStoragePouch"
         version: "${{ github.ref_name }}"
         token: "${{ secrets.GITHUB_TOKEN }}"
         OCBTOKEN: "${{ secrets.OCBTOKEN }}"

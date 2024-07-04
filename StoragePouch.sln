@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{b2947606-39f3-4906-80b9-5da885bed83d}") = "SeedPouch", "SeedPouch.csproj", "{d3d69c48-1306-4709-a359-855e1091515d}"
+Project("{b2947606-39f3-4906-80b9-5da885bed83d}") = "StoragePouch", "StoragePouch.csproj", "{d3d69c48-1306-4709-a359-855e1091515d}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

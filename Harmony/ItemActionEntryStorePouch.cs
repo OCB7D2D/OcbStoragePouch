@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using static TypedMetadataValue;
 
-public class ItemActionEntryStoreSeeds : BaseItemActionEntry
+public class ItemActionEntryStorePouch : BaseItemActionEntry
 {
 
     // ####################################################################
@@ -15,8 +15,8 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
     // ####################################################################
     // ####################################################################
 
-    public ItemActionEntryStoreSeeds(XUiC_ItemStack controller, ItemStack stack, ItemValue pouch) :
-        base(controller, "lblContextActionStoreSeeds", "ui_game_symbol_pouch_in", GamepadShortCut.DPadLeft)
+    public ItemActionEntryStorePouch(XUiC_ItemStack controller, ItemStack stack, ItemValue pouch) :
+        base(controller, "lblContextActionStorePouch", "ui_game_symbol_pouch_in", GamepadShortCut.DPadLeft)
     {
         Stack = stack;
         Pouch = pouch;
@@ -45,7 +45,7 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
         string[] types = Pouch.ItemClass.Properties
             .GetString("StoragePouch").Split(',');
         var pouch = new List<ItemStack>();
-        if (inv != null) OcbSeedPouch.Decode(inv, pouch);
+        if (inv != null) OcbStoragePouch.Decode(inv, pouch);
         ItemStack[] slots = bag.GetSlots();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -56,7 +56,7 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
             slots[i] = ItemStack.Empty.Clone();
             pouch.Add(slot); // Add to pouch
         }
-        var data = OcbSeedPouch.Encode(pouch);
+        var data = OcbStoragePouch.Encode(pouch);
         Pouch.SetMetadata("seeds", data, TypeTag.String);
         bag.SetSlots(bag.GetSlots());
         belt.SetSlots(belt.GetSlots());

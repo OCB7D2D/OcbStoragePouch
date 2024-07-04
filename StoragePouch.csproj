@@ -9,8 +9,8 @@
     <ProjectGuid>{D3D69C48-1306-4709-A359-855E1091515D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SeedPouch</RootNamespace>
-    <AssemblyName>SeedPouch</AssemblyName>
+    <RootNamespace>StoragePouch</RootNamespace>
+    <AssemblyName>StoragePouch</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -98,9 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Harmony\ItemActionEntryLoadSeeds.cs" />
-    <Compile Include="Harmony\ItemActionEntryStoreSeeds.cs" />
-    <Compile Include="Harmony\SeedPouch.cs" />
+    <Compile Include="Harmony\ItemActionEntryLoadPouch.cs" />
+    <Compile Include="Harmony\ItemActionEntryStorePouch.cs" />
+    <Compile Include="Harmony\StoragePouch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\blocks.xml" />

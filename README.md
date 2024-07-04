@@ -31,7 +31,7 @@ See how the seeds pouch and the magazine briefcase are set up.
 
 ## How to unlock
 
-I've put the seed pouch  behind pack mule perk level 2 (bag lady),
+I've put the seed pouch behind pack mule perk level 2 (bag lady),
 and the briefcase behind pack mule perk level 2 (neat and tidy),
 mainly in order to make that perk branch a little more useful ;)
 
@@ -48,6 +48,8 @@ Only clone or download the repo if you know what you do!
 ### Version 0.1.0
 
 - First compatibility with V1.0 (exp)
+- Add briefcase for magazines
+- Rename to OcbStoragePouch
 
 ### Version 0.0.2
 
@@ -57,8 +59,8 @@ Only clone or download the repo if you know what you do!
 
 - Initial version
 
-[1]: https://github.com/OCB7D2D/OcbSeedPouch
-[2]: https://github.com/OCB7D2D/OcbSeedPouch/releases
+[1]: https://github.com/OCB7D2D/OcbStoragePouch
+[2]: https://github.com/OCB7D2D/OcbStoragePouch/releases
 [3]: https://www.nexusmods.com/7daystodie/mods/3700
-[4]: https://github.com/OCB7D2D/OcbSeedPouch/actions/workflows/ci.yml
-[5]: https://github.com/OCB7D2D/OcbSeedPouch/actions/workflows/ci.yml/badge.svg
+[4]: https://github.com/OCB7D2D/OcbStoragePouch/actions/workflows/ci.yml
+[5]: https://github.com/OCB7D2D/OcbStoragePouch/actions/workflows/ci.yml/badge.svg

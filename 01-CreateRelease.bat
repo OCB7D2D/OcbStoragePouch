@@ -1,6 +1,6 @@
 @echo off
 
-SET NAME=OcbSeedPouch
+SET NAME=OcbStoragePouch
 
 if not exist build\ (
   mkdir build
