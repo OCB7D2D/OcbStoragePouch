@@ -25,5 +25,58 @@
 			<property name="MaintenanceGroup" value="MG_Iron"/>
 			<property name="StoragePouch" value="True"/>
 		</item>
+		<item name="OcbBriefcase">
+			<!-- <property name="DisplayType" value="clothing"/> -->
+			<property name="Tags" value="canHaveCosmetic,noMods,clothing"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="UnlockedBy" value="perkPackMule"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Weight" value="30"/>
+			<property name="Material" value="Mleather"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="EconomicValue" value="1200"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Clothing,TCClothing"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+			<!-- Properties for ULM compatibility -->
+			<property name="CarryWeight" value="2.5"/>
+			<property name="MaintenanceGroup" value="MG_Iron"/>
+			<property name="StoragePouch" value="True"/>
+		</item>
+	</append>
+	<append
+		xpath="/items/item[
+    substring(@name, string-length(@name) - 7) = 'Magazine' or
+    starts-with(@name, 'bookFiremansAlmanac') or
+    starts-with(@name, 'bookNightStalker') or
+    starts-with(@name, 'bookLuckyLooter') or
+    starts-with(@name, 'bookEnforcer') or
+    starts-with(@name, 'bookBatterUp') or
+    starts-with(@name, 'bookGreatHeist') or
+    starts-with(@name, 'bookWasteTreasures') or
+    starts-with(@name, 'bookHuntingJournal') or
+    starts-with(@name, 'bookArtOfMining') or
+    starts-with(@name, 'bookRangers') or
+    starts-with(@name, 'bookPistolPete') or
+    starts-with(@name, 'bookShotgunMessiah') or
+    starts-with(@name, 'bookSniper') or
+    starts-with(@name, 'bookAutoWeapons') or
+    starts-with(@name, 'bookUrbanCombat') or
+    starts-with(@name, 'bookTechJunkie') or
+    starts-with(@name, 'bookBarBrawling') or
+    starts-with(@name, 'bookSpearHunter') or
+    starts-with(@name, 'bookFiremans') or
+    starts-with(@name, 'bookFiremans') or
+    starts-with(@name, 'bookFiremans')
+  ]"
+	>
+		<property name="OcbBriefcase" value="True"/>
 	</append>
 </configs>

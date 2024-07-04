@@ -27,7 +27,7 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
     // ####################################################################
     // ####################################################################
 
-    private bool IsBagable(ItemClass item)
+    private bool IsBagable(ItemClass item, string[] types)
     {
         if (!item.IsBlock()) return item.Properties.GetBool(PouchName);
         else return item.GetBlock().Properties.GetBool(PouchName);
@@ -41,6 +41,9 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
         var bag = ItemController.xui.PlayerInventory.Backpack;
         var belt = ItemController.xui.PlayerInventory.Toolbelt;
         object inv = Pouch.GetMetadata("seeds");
+        // Get the types we can collect in this pouch
+        string[] types = Pouch.ItemClass.Properties
+            .GetString("StoragePouch").Split(',');
         var pouch = new List<ItemStack>();
         if (inv != null) OcbSeedPouch.Decode(inv, pouch);
         ItemStack[] slots = bag.GetSlots();
@@ -49,7 +52,7 @@ public class ItemActionEntryStoreSeeds : BaseItemActionEntry
             ItemStack slot = slots[i];
             var ic = slot?.itemValue?.ItemClass;
             if (ic == null) continue;
-            if (!IsBagable(ic)) continue;
+            if (!IsBagable(ic, types)) continue;
             slots[i] = ItemStack.Empty.Clone();
             pouch.Add(slot); // Add to pouch
         }
