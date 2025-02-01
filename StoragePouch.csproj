@@ -100,11 +100,21 @@
   <ItemGroup>
     <Compile Include="Harmony\ItemActionEntryLoadPouch.cs" />
     <Compile Include="Harmony\ItemActionEntryStorePouch.cs" />
+    <Compile Include="Harmony\LoadOrder.cs" />
+    <Compile Include="Harmony\ModXmlPatcher.cs" />
     <Compile Include="Harmony\StoragePouch.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\blocks.v1.al.xml" />
+    <Content Include="Config\blocks.v1.xml" />
     <Content Include="Config\blocks.xml" />
+    <Content Include="Config\items.v1.al.xml" />
+    <Content Include="Config\items.v1.xml" />
+    <Content Include="Config\progression.v1.al.xml" />
+    <Content Include="Config\progression.v1.xml" />
     <Content Include="Config\progression.xml" />
+    <Content Include="Config\recipes.v1.al.xml" />
+    <Content Include="Config\recipes.v1.xml" />
     <Content Include="Config\recipes.xml" />
     <Content Include="Config\items.xml" />
     <Content Include="Config\Localization.txt" />

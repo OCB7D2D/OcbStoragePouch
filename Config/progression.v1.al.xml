@@ -1,0 +1,17 @@
+<configs>
+
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_Tailoring']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='armorLumberjackBoots']">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,1000" value="1" tags="OcbSeedPouch"/>
+  </insertafter>
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_Tailoring']/effect_group/passive_effect[@name='CraftingTier' and @tags='armorLumberjackBoots']">
+    <passive_effect name="CraftingTier" operation="base_add" level="15,115,1000" value="1,32767,65535" tags="OcbSeedPouch"/>
+  </insertafter>
+
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_Leatherworking']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='armorCommandoBoots']">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,1000" value="1" tags="OcbBriefcase"/>
+  </insertafter>
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_Leatherworking']/effect_group/passive_effect[@name='CraftingTier' and @tags='armorCommandoBoots']">
+    <passive_effect name="CraftingTier" operation="base_add" level="25,125,1000" value="1,32767,65535" tags="OcbBriefcase"/>
+  </insertafter>
+
+</configs>

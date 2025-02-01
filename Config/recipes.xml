@@ -1,15 +1,16 @@
-<configs>
-	<append xpath="/recipes">
-		<recipe name="OcbSeedPouch" count="1" craft_time="40" craft_area="workbench" tags="perkPackMule,learnable">
-			<ingredient name="resourceCloth" count="72"/>
-			<ingredient name="resourceLeather" count="24"/>
-			<ingredient name="resourceSewingKit" count="4"/>
-		</recipe>
-		<recipe name="OcbBriefcase" count="1" craft_time="60" craft_area="workbench" tags="perkPackMule,learnable">
-			<ingredient name="resourceCloth" count="20"/>
-			<ingredient name="resourceLeather" count="60"/>
-			<ingredient name="resourceSewingKit" count="2"/>
-			<ingredient name="resourceScrapBrass" count="120"/>
-		</recipe>
-	</append>
+<configs patcher-version="6">
+
+  <modif condition="UndeadLegacy_CoreModule">
+    <log error="No Undead Legacy compatibility for OcbStoragePouch"/>
+  </modif>
+  <modelsif condition="DarknessFallsCore">
+    <log error="No Darkness Falls compatibility for OcbStoragePouch"/>
+  </modelsif>
+  <modelsif condition="Afterlife">
+    <modinc path="recipes.v1.al.xml"/>
+  </modelsif>
+  <modelse>
+    <modinc path="recipes.v1.xml"/>
+  </modelse>
+
 </configs>

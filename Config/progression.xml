@@ -1,6 +1,16 @@
-<configs>
-	<append xpath="/progression/perks/perk[@name='perkPackMule']/effect_group">
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="OcbSeedPouch"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="OcbBriefcase"/>
-	</append>
+<configs patcher-version="6">
+
+  <modif condition="UndeadLegacy_CoreModule">
+    <log error="No Undead Legacy compatibility for OcbStoragePouch"/>
+  </modif>
+  <modelsif condition="DarknessFallsCore">
+    <log error="No Darkness Falls compatibility for OcbStoragePouch"/>
+  </modelsif>
+  <modelsif condition="Afterlife">
+    <modinc path="progression.v1.al.xml"/>
+  </modelsif>
+  <modelse>
+    <modinc path="progression.v1.xml"/>
+  </modelse>
+
 </configs>
