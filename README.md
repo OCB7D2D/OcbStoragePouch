@@ -1,4 +1,4 @@
-# OCB Storage Pouch  - 7 Days to Die (V2.0) Addon
+# OCB Storage Pouch  - 7 Days to Die (V2.1) Addon
 
 Mod to store all seeds in a pouch to free up used inventory slots.
 
